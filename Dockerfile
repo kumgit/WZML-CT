@@ -9,7 +9,6 @@ RUN apt -qq update --fix-missing && \
 
 COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
-RUN python -m pip install pymongo
 RUN apt-get update && apt-get upgrade -y
 
 CMD ["bash", "start.sh"]
